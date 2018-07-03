@@ -19,19 +19,16 @@ class Welcome extends Component {
       })
   }
    
+  formatCurrentWeather (currentWeather) {
+    return currentWeather.toLowerCase()
+  }
 
   
   render() {
-      
-   
-    console.log("This is the current weather in render " + JSON.stringify(this.state.currentWeather))
-    // let currentWeather = '🌃'
-    // this.state.current === 'none' ? null : currentWeather = this.formatCurrentWeather(this.state.current.weatherPrimary)
-
     return (
       <div className="Welcome section">
 
-        <h1 className="welcome-intro"><strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.state.currentWeather} Zurich
+        <h1 className="welcome-intro"><strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather)} Zurich
         <br/>
         <br/>
           <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" aria-hidden="true"/></a>    
