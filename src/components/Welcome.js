@@ -21,20 +21,13 @@ class Welcome extends Component {
   }
 
   formatCurrentWeather (currentWeather) {
-    // if (currentWeather === "mostly cloudy") {
-    //   this.setState({weatherIcon: "fas fa-cloud i-hov"})
-    // }
-    // if (currentWeather === "sunny") {
-    //   this.setState({weatherIcon: "fas fa-sun i-hov"})
-    // }
     return currentWeather
   }
-  
+
   render() {
     return (
       <div className="Welcome section">
-
-        <h1 className="welcome-intro"><strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather.toLowerCase())} Zurich <i className={this.state.weatherIcon} aria-hidden="true"/>
+        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather.toLowerCase())} Zurich <i className={this.state.weatherIcon} aria-hidden="true"/>
         <br/>
         <br/>
           <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" aria-hidden="true"/></a>    

@@ -9,6 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
+    "react-tagcloud": "^1.2.1",
     "uninstall": "0.0.0"
   },
   "scripts": {
