@@ -20,14 +20,34 @@ class Welcome extends Component {
       })
   }
 
+
+  getWeatherIcon(weather){
+    if(weather.includes("sun")){
+      return "fa fa-cloud";
+    }
+    if(weather.includes("rain")){
+      return "fa fa-umbrella";
+    }
+    if(weather.includes("sun")){
+      return "fa fa-umbrella";
+    }
+    else{
+      return "fa fa-cloud";
+    }
+  }
+
   formatCurrentWeather (currentWeather) {
+    currentWeather= currentWeather.replace("mostly","");
+    currentWeather= currentWeather.replace("partly","");
+    // this.setState({weatherIcon: this.getWeatherIcon(currentWeather)})
+
     return currentWeather
   }
 
   render() {
     return (
       <div className="Welcome section">
-        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather.toLowerCase())} Zurich <i className={this.state.weatherIcon} aria-hidden="true"/>
+        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather.toLowerCase())} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
         <br/>
         <br/>
           <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" aria-hidden="true"/></a>    

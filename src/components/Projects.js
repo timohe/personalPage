@@ -13,24 +13,42 @@ class Projects extends Component {
 			// for TagCloud
 			data:
 				[
-					{ value: "Reinforced Learning", count: 25 }, { value: "Smart Contracts", count: 18 },
-					{ value: "Web-Development", count: 38 }, { value: "Outsourcing", count: 17 },
-					{ value: "Project-Mgmt", count: 25 }, { value: "Prototyping", count: 20 },
-					{ value: "Hosting", count: 22 }, { value: "Machine Learning", count: 21 },
-					{ value: "Neural Networks", count: 27 },
-					{ value: "Deep Learning", count: 30 }, { value: "Chatbots", count: 25 },
-					{ value: "Economics", count: 30, color: "blue" }, { value: "Design Thinking", count: 18 },
+					{ value: "Reinforced Learning", count: 25, color: this.generateInitialColor()}, 
+					{ value: "Smart Contracts", count: 18, color: this.generateInitialColor()},
+					{ value: "Web-Development", count: 38, color: this.generateInitialColor()}, 
+					{ value: "Outsourcing", count: 17, color: this.generateInitialColor()},
+					{ value: "Project-Mgmt", count: 25, color: this.generateInitialColor()}, 
+					{ value: "Prototyping", count: 20, color: this.generateInitialColor()},
+					{ value: "Hosting", count: 22, color: this.generateInitialColor()}, 
+					{ value: "Machine Learning", count: 21, color: this.generateInitialColor()},
+					{ value: "Neural Networks", count: 27, color: this.generateInitialColor()},
+					{ value: "Deep Learning", count: 30, color: this.generateInitialColor()}, 
+					{ value: "Chatbots", count: 25, color: this.generateInitialColor()},
+					{ value: "Economics", count: 30, color: this.generateInitialColor()}, 
+					{ value: "Design Thinking", count: 18, color: this.generateInitialColor()},
 				],
-			colorOptions: {
-				// luminosity: 'dark',
-				hue: 'monochrome'
-			},
-			// for exanding
+			// for exanded view
 			height: 0,
 			expandedTitle: 'not defined yet',
 			expandedText: 'not defined yet',
 		};
 	}
+
+
+	// changeColor = () => {
+	// 	this.setState({
+	// 		// data: color= '#00f2e7'
+	// 	});
+	// 	return 
+	// }
+
+	generateInitialColor = () => {
+		var value = Math.random() * 0xFF | 0;
+		var grayscale = (value << 16) | (value << 8) | value;
+		var color = '#' + grayscale.toString(16);
+		return color;
+	};
+	
 
 	expandDescription = () => {
 		const { height } = this.state;
@@ -69,9 +87,11 @@ class Projects extends Component {
 						}
 						onMouseMove={
 							() => {
+								// this.changeColor();
 								console.log("hovererd")
 							}
 						}
+						shuffle = {false}
 					/>
 				</div>
 				<div className ="light-border">
