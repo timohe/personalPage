@@ -35,15 +35,17 @@ class Projects extends Component {
 		});
 	};
 
-	getData = (val) => {
-		console.log(val);
-	}
+	getDataFromChild = (param) => {
+        console.log(param);
+    }
 
 	render() {
 		return (
 			<div>
 				<div>
-					<CustomTagCloud sendData={this.getData}/>
+					<CustomTagCloud 
+						getDataFromChild={this.getDataFromChild}
+					/>
 				</div>
 				<div className="light-border">
 					<AnimateHeight
