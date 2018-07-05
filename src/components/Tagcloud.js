@@ -27,14 +27,10 @@ const data = [
 const customRenderer = (tag, size, color) => (
 	<span key={tag.value}
 		  style={{
-			// animation: 'blinker 3s linear infinite',
-			// animationDelay: `${Math.random() * 2}s`,
-			// fontSize: `${size}em`,
-			// border: `2px solid ${color}`,
 			margin: '3px',
-			// padding: '3px',
+			padding: '3px',
 			// display: 'inline-block',
-			size: size,
+			fontSize: size,
 			color: color,
 		  }}>{tag.value}</span>
 );
@@ -45,6 +41,6 @@ export default () => (
             tags={data}
             className="simple-cloud"
 			onClick={tag => alert(`'${tag.value}' was selected!`)}
-			// renderer={customRenderer} 
+			renderer={customRenderer} 
 	/>
 );
