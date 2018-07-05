@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { TagCloud } from "react-tagcloud";
+// import { TagCloud } from "react-tagcloud";
+import TagCloud from "./Tagcloud.js";
 import AnimateHeight from 'react-animate-height';
-import {test} from '../texts/projectDetails.js'
+import { test } from '../texts/projectDetails.js'
 
 // https://madox2.github.io/react-tagcloud/
 // https://github.com/Stanko/react-animate-height
@@ -11,22 +12,22 @@ class Projects extends Component {
 		super()
 		this.state = {
 			// for TagCloud
-			data:
-				[
-					{ value: "Reinforced Learning", count: 25, color: this.generateInitialColor()}, 
-					{ value: "Smart Contracts", count: 18, color: this.generateInitialColor()},
-					{ value: "Web-Development", count: 38, color: this.generateInitialColor()}, 
-					{ value: "Outsourcing", count: 17, color: this.generateInitialColor()},
-					{ value: "Project-Mgmt", count: 25, color: this.generateInitialColor()}, 
-					{ value: "Prototyping", count: 20, color: this.generateInitialColor()},
-					{ value: "Hosting", count: 22, color: this.generateInitialColor()}, 
-					{ value: "Machine Learning", count: 21, color: this.generateInitialColor()},
-					{ value: "Neural Networks", count: 27, color: this.generateInitialColor()},
-					{ value: "Deep Learning", count: 30, color: this.generateInitialColor()}, 
-					{ value: "Chatbots", count: 25, color: this.generateInitialColor()},
-					{ value: "Economics", count: 30, color: this.generateInitialColor()}, 
-					{ value: "Design Thinking", count: 18, color: this.generateInitialColor()},
-				],
+			// data:
+			// 	[
+			// 		{ value: "Reinforced Learning", count: 25, color: this.generateInitialColor() },
+			// 		{ value: "Smart Contracts", count: 18, color: this.generateInitialColor() },
+			// 		{ value: "Web-Development", count: 38, color: this.generateInitialColor() },
+			// 		{ value: "Outsourcing", count: 17, color: this.generateInitialColor() },
+			// 		{ value: "Project-Mgmt", count: 25, color: this.generateInitialColor() },
+			// 		{ value: "Prototyping", count: 20, color: this.generateInitialColor() },
+			// 		{ value: "Hosting", count: 22, color: this.generateInitialColor() },
+			// 		{ value: "Machine Learning", count: 21, color: this.generateInitialColor() },
+			// 		{ value: "Neural Networks", count: 27, color: this.generateInitialColor() },
+			// 		{ value: "Deep Learning", count: 30, color: this.generateInitialColor() },
+			// 		{ value: "Chatbots", count: 25, color: this.generateInitialColor() },
+			// 		{ value: "Economics", count: 30, color: this.generateInitialColor() },
+			// 		{ value: "Design Thinking", count: 18, color: this.generateInitialColor() },
+			// 	],
 			// for exanded view
 			height: 0,
 			expandedTitle: 'not defined yet',
@@ -42,14 +43,7 @@ class Projects extends Component {
 	// 	return 
 	// }
 
-	generateInitialColor = () => {
-		var value = Math.random() * 0xFF | 0;
-		var grayscale = (value << 16) | (value << 8) | value;
-		var color = '#' + grayscale.toString(16);
-		return color;
-	};
 	
-
 	expandDescription = () => {
 		const { height } = this.state;
 		this.setState({
@@ -69,32 +63,31 @@ class Projects extends Component {
 		});
 	};
 
+
+	customRenderer = (tag, size, color) => (
+		<span key={tag.value}
+			style={{
+				// animation: 'blinker 3s linear infinite',
+				// animationDelay: `${Math.random() * 2}s`,
+				fontSize: `${size}em`,
+				border: `2px solid ${color}`,
+				margin: '3px',
+				padding: '3px',
+				display: 'inline-block',
+				color: 'white',
+			}}>{tag.value}
+		</span>
+	);
+
+
+
+
 	render() {
 		return (
 			<div>
-				<div>
-					<TagCloud
-						minSize={12}
-						maxSize={35}
-						tags={this.state.data}
-						colorOptions={this.state.colorOptions}
-						className="simple-cloud"
-						onClick={
-							(tag) => {
-								this.expandDescription();
-								this.setDescriptionTexts(tag.value);
-							}
-						}
-						onMouseMove={
-							() => {
-								// this.changeColor();
-								console.log("hovererd")
-							}
-						}
-						shuffle = {false}
-					/>
-				</div>
-				<div className ="light-border">
+				<TagCloud/>
+				
+				<div className="light-border">
 					<AnimateHeight
 						duration={500}
 						height={this.state.height} // see props documentation bellow

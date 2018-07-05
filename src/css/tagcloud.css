@@ -1,26 +1,35 @@
-.app-outer {
+/* .app-outer {
    align-items: center; 
    display: flex;
    flex-direction: column;
    justify-content: center;
+   max-width : 100px;
 }
 
 .app-inner {
    height: 100%;
    width: 100%;
-}
+} */
 
-.tag-cloud {
+/* .tag-cloud {
    flex: 1;
 }
 
 .tag-cloud > div {
    transition: 1.4s;
-}
+} */
 
 .light-border{
     border:2px lightgray solid;
 }
+.tagcloud{
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+/* .tag-cloud-tag{
+    color: red;
+} */
 /* .tags{
     color: blue;
     background-color: blue;

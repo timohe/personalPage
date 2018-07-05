@@ -12,42 +12,37 @@ class Welcome extends Component {
     };
   }
 
+  setWeatherAndIcon = (weather) => {
+    weather= weather.toLowerCase();
+    weather= weather.replace("mostly","");
+    weather= weather.replace("partly","");
+    this.setState({currentWeather: weather})
+    if(weather.includes("cloud")){
+      this.setState({weatherIcon: "fa fa-cloud"})
+    }
+    if(weather.includes("rain")){
+      this.setState({weatherIcon: "fa fa-rain"})
+    }
+    if(weather.includes("sun")){
+      this.setState({weatherIcon: "fa fa-sun"})
+    }
+    else{
+      this.setState({weatherIcon: "fa fa-cloud"})
+    }
+  }
+
   componentDidMount = () => {
     fetch(`https://api.aerisapi.com/observations/zurich,ch?client_id=${accessId}&client_secret=${APIkey}`)
     .then((response) => response.json())
       .then((res) => {
-        this.setState({currentWeather: res.response.ob.weatherPrimary})
+        this.setWeatherAndIcon(res.response.ob.weatherPrimary)
       })
-  }
-
-
-  getWeatherIcon(weather){
-    if(weather.includes("sun")){
-      return "fa fa-cloud";
-    }
-    if(weather.includes("rain")){
-      return "fa fa-umbrella";
-    }
-    if(weather.includes("sun")){
-      return "fa fa-umbrella";
-    }
-    else{
-      return "fa fa-cloud";
-    }
-  }
-
-  formatCurrentWeather (currentWeather) {
-    currentWeather= currentWeather.replace("mostly","");
-    currentWeather= currentWeather.replace("partly","");
-    // this.setState({weatherIcon: this.getWeatherIcon(currentWeather)})
-
-    return currentWeather
   }
 
   render() {
     return (
       <div className="Welcome section">
-        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <strong>student </strong>&<strong> tech-enthusiast</strong> living in {this.formatCurrentWeather(this.state.currentWeather.toLowerCase())} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
+        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <font color="#00f2e7">tech-enthusiast</font> living in {this.state.currentWeather} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
         <br/>
         <br/>
           <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" aria-hidden="true"/></a>    
