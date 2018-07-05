@@ -21,7 +21,7 @@ class CustomTagCloud extends Component {
 				{ value: "Economics", count: 30, color: this.generateInitialColor() },
 				{ value: "Design Thinking", count: 18, color: this.generateInitialColor() },
 			],
-			selectedTag: "ReinforcedLearning"
+			selectedTag: "Outsourcing",
 		};
 	}
 
@@ -32,11 +32,12 @@ class CustomTagCloud extends Component {
 		return color;
 	};
 
-	setColorWhenClicked() {
-		var value = Math.random() * 0xFF | 0;
-		var grayscale = (value << 16) | (value << 8) | value;
-		var color = '#' + grayscale.toString(16);
-		return color;
+	setTagColor(color, tagValue) {
+		if(tagValue === this.state.selectedTag){
+			return "blue";
+		}else{
+			return color;
+		}
 	};
 
 	customRenderer = (tag, size, color) => (
@@ -46,13 +47,13 @@ class CustomTagCloud extends Component {
 				padding: '3px',
 				// display: 'inline-block',
 				fontSize: size,
-				color: color,
+				color: this.setTagColor(color, tag.value),
 			}}>{tag.value}</span>
 	);
 
-	handleClickedTag = (tagValue) => {
-		this.props.sendDataToParent(tagValue);
-	}
+	// handleClickedTag = (tagValue) => {
+	// 	this.props.sendDataToParent(tagValue);
+	// }
 
 
 	render() {
@@ -63,7 +64,11 @@ class CustomTagCloud extends Component {
 				className="simple-cloud"
 				onClick={
 					(tag) => {
-						this.handleClickedTag(tag.value);
+						// this.handleClickedTag(tag.value);
+						this.setState({
+							// height: height === 0 ? 'auto' : 0,
+							selectedTag: tag.value,
+						});
 					}
 				}
 				renderer={this.customRenderer}
