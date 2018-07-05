@@ -8,7 +8,7 @@ class Welcome extends Component {
     super()
     this.state = {
       currentWeather: "Not set yet",
-      weatherIcon: "fa fa-cloud",
+      weatherIcon: "fa fa-sun",
     };
   }
 
@@ -16,14 +16,17 @@ class Welcome extends Component {
     weather= weather.toLowerCase();
     weather= weather.replace("mostly","");
     weather= weather.replace("partly","");
+    weather= weather.replace("light rain","rainy");
+    weather= weather.replace("light","");
+    console.log(weather);
     this.setState({currentWeather: weather})
     if(weather.includes("cloud")){
       this.setState({weatherIcon: "fa fa-cloud"})
     }
-    if(weather.includes("rain")){
-      this.setState({weatherIcon: "fa fa-rain"})
+    else if(weather.includes("rain")){
+      this.setState({weatherIcon: "fa fa-umbrella"})
     }
-    if(weather.includes("sun")){
+    else if(weather.includes("sun")){
       this.setState({weatherIcon: "fa fa-sun"})
     }
     else{
@@ -45,13 +48,13 @@ class Welcome extends Component {
         <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <font color="#00f2e7">tech-enthusiast</font> living in {this.state.currentWeather} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
         <br/>
         <br/>
-          <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" aria-hidden="true"/></a>    
-          <a href="https://github.com/timohe" target="_blank" rel="noopener noreferrer"><i className="fa fa-github i-hov" aria-hidden="true"/></a>  
-          <a href="mailto:t.hegnauer@gmail.com?Subject=Hello%20there!" target="_top"><i className="fa fa-envelope i-hov" aria-hidden="true"/></a>
+          <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" /></a>    
+          <a href="https://github.com/timohe" target="_blank" rel="noopener noreferrer"><i className="fa fa-github i-hov" /></a>  
+          <a href="mailto:t.hegnauer@gmail.com?Subject=Hello%20there!" target="_top"><i className="fa fa-envelope i-hov"/></a>
         <br/>
           <a href="https://drive.google.com/file/d/1pF67AwQH9bCm20vqytKCGxny0Dgakk0N/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button className="button resume-button">Resume <i className="fa fa-file-pdf-o" aria-hidden="true"/></button></a>
         </h1>
-        <img src={portrait} className="main-pic"/>
+        <img src={portrait} className="main-pic" alt="Profile"/>
       </div>
     );
   }

@@ -23,20 +23,13 @@ class Projects extends Component {
 			height: 'auto',
 		});
 	};
-	setDescriptionTexts = (tagValue) => {
-		//filters out all special characters except digits, characters, underscores 
-		//stackoverflow.com/questions/4374822/remove-all-special-characters-with-regexp
-		var formatedTag = tagValue.replace(/[^\w]/gi, '')
-		let text = "this would be the text"
-
+	
+	getDataFromChild = (param) => {
+		var formatedTag = param.replace(/[^\w]/gi, '')
 		this.setState({
-			expandedTitle: tagValue,
+			expandedTitle: param,
 			expandedText: test[formatedTag],
 		});
-	};
-
-	getDataFromChild = (param) => {
-        console.log(param);
     }
 
 	render() {
@@ -45,14 +38,15 @@ class Projects extends Component {
 				<div>
 					<CustomTagCloud 
 						getDataFromChild={this.getDataFromChild}
+						expandDescription={this.expandDescription}
 					/>
 				</div>
-				<div className="light-border">
+				<div>
 					<AnimateHeight
 						duration={500}
 						height={this.state.height} // see props documentation bellow
 					>
-						<h1>{this.state.expandedTitle}</h1>
+						{/* <h1>{this.state.expandedTitle}</h1> */}
 						<p>{this.state.expandedText}</p>
 					</AnimateHeight>
 				</div>

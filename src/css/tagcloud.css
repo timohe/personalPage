@@ -19,9 +19,6 @@
    transition: 1.4s;
 } */
 
-.light-border{
-    border:2px lightgray solid;
-}
 .tagcloud{
     /* max-width: 800px; */
     margin: 0 auto;

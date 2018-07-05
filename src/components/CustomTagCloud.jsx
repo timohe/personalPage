@@ -26,10 +26,19 @@ class CustomTagCloud extends Component {
 	}
 
 	generateInitialColor() {
-		var value = Math.random() * 0xFF | 0;
-		var grayscale = (value << 16) | (value << 8) | value;
-		var color = '#' + grayscale.toString(16);
-		return color;
+		//r,g and b must all have same values to be grey
+		function componentToHex(c) {
+			var hex = c.toString(16);
+			return hex.length == 1 ? "0" + hex : hex;
+		}
+		function rgbToHex(r, g, b) {
+			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+		}
+		var max=180
+		var min=1
+		var colorVal = Math.random() * (max - min) + min
+		colorVal =  Math.floor(colorVal);				
+		return rgbToHex(colorVal, colorVal, colorVal);
 	};
 
 	setTagColor(color, tagValue) {
@@ -51,19 +60,17 @@ class CustomTagCloud extends Component {
 			}}>{tag.value}</span>
 	);
 
-	passDataToParent = (tag) => {
-        {this.props.getDataFromChild(tag.value)};            
-    }
-
 	render() {
 		return (
 			<TagCloud minSize={18}
 				maxSize={35}
 				tags={this.state.data}
 				className="simple-cloud"
+				cursor = "pointer"
 				onClick={
 					(tag) => {
-						this.passDataToParent(tag);
+						this.props.getDataFromChild(tag.value);
+						this.props.expandDescription(tag.value)
 						this.setState({
 							selectedTag: tag.value,
 						});
