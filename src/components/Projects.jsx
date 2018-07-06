@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { TagCloud } from "react-tagcloud";
 import CustomTagCloud from "./CustomTagCloud";
 import AnimateHeight from 'react-animate-height';
 import { test } from '../texts/projectDetails.js'

@@ -57,9 +57,7 @@ class Welcome extends Component {
             <a href="https://drive.google.com/file/d/1pF67AwQH9bCm20vqytKCGxny0Dgakk0N/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button className="button resume-button">Resume <i className="fa fa-file-pdf-o" aria-hidden="true" /></button></a>
           </h1>
         </div>
-        <div className="Intro-Picture">
           <img src={portrait} className="main-pic" alt="Profile" />
-        </div>
       </div>
     );
   }

@@ -10,6 +10,8 @@
     position: fixed;
     top: 0;
     width: 100%;
+    /* overlay all other elements */
+    z-index: 1;
 }
 
 .NavBarList {
@@ -37,37 +39,19 @@
 /* WELCOME */
 
 .Welcome {
+    width : 100%;
     margin-top: 15vh;
     margin-bottom: 15vh;
     font-size: 1.5em;
-    background-color: blue;
     justify-content: center;
     -webkit-align-items: center; 
     align-items: center; 
     display: flex;
-  float: left;
-    /* float: none; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    float: left;
 }
 
 .Intro-Text {
-    float: left;
-    background-color: beige;
-    padding: 0vw 15vw 0vw 15vw;
-}
-
-.Intro-Picture {
-    background-color: greenyellow;
-}
-
-.Welcome .i-hov {
-    color: black;
-    margin: 10px;
-    display: inline-block;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    padding: 0vw 12vw 0vw 12vw;
 }
 
 .welcome-intro strong {
@@ -79,10 +63,20 @@
     font-size: 1em;
 }
 
+
+.Welcome .i-hov {
+    color: black;
+    margin: 10px;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
 .main-pic {
     border-radius: 50%;
     width: 28vw;
     padding: 20px;
+    float: none;
 }
 
 .Welcome .resume-button {
@@ -137,4 +131,16 @@ p {
     max-width: 700px;
     margin: 0 auto;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .Welcome {
+        display: block;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+    .main-pic {
+        width:50vw;
+    }
 }
