@@ -29,7 +29,7 @@ class CustomTagCloud extends Component {
 		//r,g and b must all have same values to be grey
 		function componentToHex(c) {
 			var hex = c.toString(16);
-			return hex.length == 1 ? "0" + hex : hex;
+			return hex.length === 1 ? "0" + hex : hex;
 		}
 		function rgbToHex(r, g, b) {
 			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
@@ -41,7 +41,7 @@ class CustomTagCloud extends Component {
 		return rgbToHex(colorVal, colorVal, colorVal);
 	};
 
-	setTagColor(color, tagValue) {
+	setTagColor = (color, tagValue) => {
 		if(tagValue === this.state.selectedTag){
 			return "#00f2e7";
 		}else{
@@ -49,13 +49,13 @@ class CustomTagCloud extends Component {
 		}
 	};
 
-	customRenderer = (tag, size, color) => (
+	customRenderer = (tag, size, color) => (		
 		<span key={tag.value}
 			style={{
 				margin: '3px',
 				padding: '3px',
 				// display: 'inline-block',
-				fontSize: size,
+				fontSize: `${size/25}em`,
 				color: this.setTagColor(color, tag.value),
 			}}>{tag.value}</span>
 	);

@@ -17,9 +17,7 @@ class Projects extends Component {
 		};
 	}
 	expandDescription = () => {
-		const { height } = this.state;
 		this.setState({
-			// height: height === 0 ? 'auto' : 0,
 			height: 'auto',
 		});
 	};
@@ -46,7 +44,6 @@ class Projects extends Component {
 						duration={500}
 						height={this.state.height} // see props documentation bellow
 					>
-						{/* <h1>{this.state.expandedTitle}</h1> */}
 						<p>{this.state.expandedText}</p>
 					</AnimateHeight>
 				</div>

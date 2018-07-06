@@ -2,48 +2,36 @@
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: calc(112.5% + 0.25vw);
-    max-width: 100%;
 }
 
 /* NAV-BAR */
 
-.nav-link {
-    /* opacity: 0; */
-}
-
-.NavBar .nav-name {
-    font-size: 36px;
-    margin-left: 10px;
-}
-
 .NavBar {
-    list-style-type: none;
-    width: 100%;
     position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.NavBarList {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    text-align: center;
     background-color: #f1f1f1;
-    z-index: 500;
-    height: 2em;
 }
 
 .nav-link {
-    font-weight: 300;
     float: right;
     display: block;
-    color: #666;
-    text-align: center;
-    padding: 0.7em 0.7em;
+    color: grey;
+    padding: 14px 16px;
     text-decoration: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    font-weight: 300;
 }
 
-.nav-link:hover:not(.active) {
-    background-color: #bafffc;
-    color: #16223C;
+.nav-link:hover {
+    background-color: #00f2e7;
+    color: white;
 }
 
 /* WELCOME */
@@ -52,9 +40,26 @@
     margin-top: 15vh;
     margin-bottom: 15vh;
     font-size: 1.5em;
-    display: flex;
-    align-items: center;
+    background-color: blue;
     justify-content: center;
+    -webkit-align-items: center; 
+    align-items: center; 
+    display: flex;
+  float: left;
+    /* float: none; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.Intro-Text {
+    float: left;
+    background-color: beige;
+    padding: 0vw 15vw 0vw 15vw;
+}
+
+.Intro-Picture {
+    background-color: greenyellow;
 }
 
 .Welcome .i-hov {
@@ -75,8 +80,9 @@
 }
 
 .main-pic {
-    width: 15vw;
-    min-width: 200px;
+    border-radius: 50%;
+    width: 28vw;
+    padding: 20px;
 }
 
 .Welcome .resume-button {
@@ -125,14 +131,10 @@ p {
     font-size: 0.8em;
 }
 
-.main-pic {
-    border-radius: 50%;
-    width: 28vw;
-    padding: 20px;
-}
+/* Tagcloud */
 
-.Projects {
-    background-color: #FFF;
-    display: flex;
-    flex-wrap: wrap;
+.tagcloud {
+    max-width: 700px;
+    margin: 0 auto;
+    cursor: pointer;
 }

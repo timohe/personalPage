@@ -5,7 +5,6 @@ import Projects from './components/Projects';
 import Timeline from './components/Timeline'
 import './App.css';
 import './css/timeline.css';
-import './css/tagcloud.css';
 
 class App extends Component {
   render() {
