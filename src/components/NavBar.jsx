@@ -5,9 +5,8 @@ class NavBar extends Component {
     return (
       <div>
         <ul className="NavBar">
-          {/* <li className="nav-item"><a href="#contact" className="nav-link">Contact</a></li> */}
-          <li className="nav-item"><a href="#timeline" className="nav-link">Timeline</a></li>
-          <li className="nav-item"><a href="#projects" className="nav-link">Projects</a></li>
+          <li><a href="#timeline" className="nav-link">Timeline</a></li>
+          <li><a href="#projects" className="nav-link">Projects</a></li>
         </ul>
       </div>
     );

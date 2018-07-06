@@ -10,12 +10,14 @@ import './css/tagcloud.css';
 class App extends Component {
   render() {
     return (
+      
       <div className="App">
+     
       <NavBar />
       <Welcome />
-      <h2 className="heading" id="projects">PROJECTS</h2>
+      <h2 id="projects">PROJECTS</h2>
       <Projects />
-      <h2 className="heading" id="timeline">TIMELINE</h2>
+      <h2 id="timeline">TIMELINE</h2>
       <Timeline />
       </div>
     );

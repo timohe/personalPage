@@ -35,7 +35,7 @@ class Projects extends Component {
 	render() {
 		return (
 			<div>
-				<div>
+				<div className = "tagcloud">
 					<CustomTagCloud 
 						getDataFromChild={this.getDataFromChild}
 						expandDescription={this.expandDescription}

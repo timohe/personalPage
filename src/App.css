@@ -1,109 +1,96 @@
-@media all and (max-width: 770px) {
+.App {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: calc(112.5% + 0.25vw);
+    max-width: 100%;
+}
 
-  .heading {
-    font-size: 25px;
-    line-height: 30px;
-  }
+/* NAV-BAR */
 
-  .thumb {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-  }
+.nav-link {
+    /* opacity: 0; */
+}
 
-  .nav-link {
-    opacity: 0;
-  }
-
-  .NavBar {
-    height: 50px;
-  }
-
-  .NavBar .nav-name {
+.NavBar .nav-name {
     font-size: 36px;
     margin-left: 10px;
-  }
-
-  .Welcome {
-    display: flex;
-    flex-wrap: wrap;
-    /*margin-top: 50px;*/
-    min-height: 85vh;
-  }
-
-  .welcome-intro {
-    padding-top: 15%;
-  }
-
-  .Welcome > .main-pic {
-    width: 200px
-  }
-
-  .Welcome .resume-button {
-    font-size: 18px;
-    width: 200px;
-  }
 }
 
-
-.App {
-  text-align: center;
+.NavBar {
+    list-style-type: none;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f1f1f1;
+    z-index: 500;
+    height: 2em;
 }
 
-.header h1 {
-  font-size: 50px;
-  line-height: 30px;
+.nav-link {
+    font-weight: 300;
+    float: right;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 0.7em 0.7em;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
+.nav-link:hover:not(.active) {
+    background-color: #bafffc;
+    color: #16223C;
 }
 
-h2 {
-  font-size: 50px;
-  line-height: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
-}
-
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-}
-
-p {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-}
+/* WELCOME */
 
 .Welcome {
-  display: flex;
-  background-color: #FFF;
-  height: 80vh;
-  padding-left: 75px;
-  padding-right: 75px;
-  align-items: center;
-  /*text-align: center;*/
-  justify-content: center;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Welcome .i-hov {
-  color: black;
-  margin: 10px;
-  display: inline-block;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    color: black;
+    margin: 10px;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.welcome-intro strong {
+    font-weight: 900;
+}
+
+.welcome-intro {
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.main-pic {
+    width: 15vw;
+    min-width: 200px;
+}
+
+.Welcome .resume-button {
+    font-size: 18px;
+    width: 200px;
 }
 
 .Welcome .i-hov:hover {
-  color: #00f2e7;
-  display: inline-block;
+    color: #00f2e7;
+    display: inline-block;
 }
 
 .Welcome button {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: white;
     color: black;
     border: 2px solid black;
@@ -126,80 +113,26 @@ p {
     color: white;
 }
 
-.main-pic {
-  border-radius: 50%;
-  width: 28vw;
-  padding: 20px;
+/* Section Titles */
+
+h2 {
+    font-weight: 100;
+    font-size: 2em;
+    padding-top: 10vh;
 }
 
-.welcome-intro strong {
-  font-weight: 900;
+p {
+    font-size: 0.8em;
+}
+
+.main-pic {
+    border-radius: 50%;
+    width: 28vw;
+    padding: 20px;
 }
 
 .Projects {
-  background-color: #FFF;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.NavBar {
-  list-style-type: none;
-  width: 100%;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-  /*border: 1px solid #e7e7e7;*/
-  background-color: #f1f1f1;
-  z-index: 500;
-}
-
-.nav-item {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  float: right;
-}
-
-.nav-last {
-  margin-right: 60px;
-}
-
-.nav-link {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 20px 20px;
-  text-decoration: none;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-.nav-link:hover:not(.active) {
-  background-color: #bafffc;
-  color: #16223C;
-}
-
-
-@media all and (min-width: 1600px) {
-  html {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
-
-  .NavBar {
-    max-width: 70vw;
-  }
-}
-
-@media all and (min-width: 2200px) {
-  html {
-    padding-left: 25vw;
-    padding-right: 25vw;
-    font-size: 150%;
-  }
-
-  .NavBar {
-    max-width: 50vw;
-  }
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
 }

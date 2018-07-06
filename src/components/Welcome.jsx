@@ -18,6 +18,7 @@ class Welcome extends Component {
     weather= weather.replace("partly","");
     weather= weather.replace("light rain","rainy");
     weather= weather.replace("light","");
+    weather= weather.replace("showers","rainy");
     console.log(weather);
     this.setState({currentWeather: weather})
     if(weather.includes("cloud")){
@@ -44,8 +45,8 @@ class Welcome extends Component {
 
   render() {
     return (
-      <div className="Welcome section">
-        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <font color="#00f2e7">tech-enthusiast</font> living in {this.state.currentWeather} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
+      <div className="Welcome">
+        <h1 className="welcome-intro"> <strong>Timo Hegnauer</strong> is a <font color="#00f2e7">tech-enthusiast</font> <br/> living in {this.state.currentWeather} <i className={this.state.weatherIcon} aria-hidden="true"/> Zurich 
         <br/>
         <br/>
           <a href="https://linkedin.com/in/timohegnauer" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin i-hov" /></a>    
