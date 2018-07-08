@@ -133,6 +133,18 @@ p {
     cursor: pointer;
 }
 
+.projectDetails {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1em;
+    /* cursor: pointer; */
+}
+
+a {
+    font-size: 0.8em;
+    margin-top:0;
+}
+
 
 @media only screen and (max-width: 768px) {
     .Welcome {

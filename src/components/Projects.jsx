@@ -43,7 +43,7 @@ class Projects extends Component {
 						duration={500}
 						height={this.state.height} // see props documentation bellow
 					>
-						<p>{this.state.expandedText}</p>
+						<p className = "projectDetails">{this.state.expandedText}</p>
 					</AnimateHeight>
 				</div>
 			</div>
