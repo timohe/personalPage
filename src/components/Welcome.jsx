@@ -42,7 +42,7 @@ class Welcome extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?id=2657896&APPID=f96babb6d2d20b997bc81d553874add2`)
+    fetch(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?id=2657896&APPID=f96babb6d2d20b997bc81d553874add2`)
       .then((response) => response.json())
       .then((res) => {
         // console.log((new Date).getHours())
