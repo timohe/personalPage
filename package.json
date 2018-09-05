@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "i": "^0.3.6",
     "npm": "^6.4.1",
     "react": "^16.4.1",
