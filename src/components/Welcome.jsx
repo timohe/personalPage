@@ -12,32 +12,32 @@ class Welcome extends Component {
   }
 
   setWeatherAndIcon = (weather) => {
-    weather = weather.toLowerCase();
-    weather = weather.replace("mostly", "");
-    weather = weather.replace("partly", "");
-    weather = weather.replace("light rain", "rainy");
-    weather = weather.replace("light", "");
-    weather = weather.replace("showers", "rainy");
-    weather = weather.replace("clouds", "cloudy");
-    // console.log(weather);
-    this.setState({ currentWeather: weather })
     if (weather.includes("cloud")) {
-      this.setState({ weatherIcon: "fas fa-cloud" })
+      this.setState({ weatherIcon: "fas fa-cloud", currentWeather: "cloudy" })
     }
     else if (weather.includes("rain")) {
-      this.setState({ weatherIcon: "fas fa-umbrella" })
+      this.setState({ weatherIcon: "fas fa-umbrella", currentWeather: "rainy" })
+    }
+    else if (weather.includes("shower")) {
+      this.setState({ weatherIcon: "fas fa-umbrella", currentWeather: "rainy" })
     }
     else if (weather.includes("sun")) {
-      this.setState({ weatherIcon: "fas fa-sun" })
+      this.setState({ weatherIcon: "fas fa-sun", currentWeather: "sunny" })
     }
     else if (weather.includes("clear")) {
-      this.setState({ weatherIcon: "fas fa-sun" })
+      this.setState({ weatherIcon: "fas fa-sun", currentWeather: "clear" })
+    }
+    else if (weather.includes("snow")) {
+      this.setState({ weatherIcon: "fas fa-snowflake", currentWeather: "snowy" })
+    }
+    else if (weather.includes("storm")) {
+      this.setState({ weatherIcon: "fas fa-bolt", currentWeather: "stormy" })
     }
     else {
-      this.setState({ weatherIcon: "fas fa-cloud" })
+      this.setState({ weatherIcon: "fas fa-cloud", currentWeather: "cloudy" })
     }
     if(new Date().getHours()>21){
-      this.setState({ weatherIcon: "fas fa-moon" })
+      this.setState({ weatherIcon: "fas fa-moon", currentWeather: "nightly" })
       this.setState({ currentWeather: "nighly" })
     }
   }
