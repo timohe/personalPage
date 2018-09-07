@@ -19,7 +19,6 @@ class Welcome extends Component {
     weather = weather.replace("light", "");
     weather = weather.replace("showers", "rainy");
     weather = weather.replace("clouds", "cloudy");
-    weather = weather.replace("cloud", "cloudy");
     // console.log(weather);
     this.setState({ currentWeather: weather })
     if (weather.includes("cloud")) {
