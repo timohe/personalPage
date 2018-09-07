@@ -18,6 +18,8 @@ class Welcome extends Component {
     weather = weather.replace("light rain", "rainy");
     weather = weather.replace("light", "");
     weather = weather.replace("showers", "rainy");
+    weather = weather.replace("clouds", "cloudy");
+    weather = weather.replace("cloud", "cloudy");
     // console.log(weather);
     this.setState({ currentWeather: weather })
     if (weather.includes("cloud")) {
@@ -42,7 +44,7 @@ class Welcome extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?id=2657896&APPID=f96babb6d2d20b997bc81d553874add2`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?id=2657896&APPID=f96babb6d2d20b997bc81d553874add2`)
       .then((response) => response.json())
       .then((res) => {
         // console.log((new Date).getHours())

@@ -1,6 +1,10 @@
 import React from 'react';
 
 export const test = {
+    ClickMe:
+        <div>
+            <p>Click on one of the other keywords see details about my experience.</p>
+        </div>,
     ReinforcedLearning:
         <div>
             <p>To solve the famouse mobile game '2048' aka 'threes' I used Deep Q-Learning and 
@@ -64,5 +68,9 @@ export const test = {
         <div>
             <p>I managed and lead a outsourced team of three full-time-developers for the goflink.ch website.
             I was responsible for the whole development process, the Scrum process and hiring.</p>
+        </div>,
+    Blockchain:
+        <div>
+            <p>During my studies I did several courses and projects on Blockchains and I am currently writing my masters thesis on Blockchain interoperability.</p>
         </div>
 }    

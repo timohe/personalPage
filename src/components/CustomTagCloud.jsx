@@ -9,6 +9,7 @@ class CustomTagCloud extends Component {
 			data: [
 				{ value: "Reinforced-Learning", count: 25, color: this.generateInitialColor() },
 				{ value: "Smart-Contracts", count: 25, color: this.generateInitialColor() },
+				{ value: "Click-Me", count: 29, color: '#000000'},
 				{ value: "Web-Development", count: 20, color: this.generateInitialColor() },
 				{ value: "Startup", count: 32, color: this.generateInitialColor() },
 				{ value: "Prototyping", count: 25, color: this.generateInitialColor() },
@@ -19,6 +20,7 @@ class CustomTagCloud extends Component {
 				{ value: "Hosting", count: 23, color: this.generateInitialColor() },
 				{ value: "Design-Thinking", count: 28, color: this.generateInitialColor() },
 				{ value: "Outsourcing", count: 20, color: this.generateInitialColor() },
+				{ value: "Blockchain", count: 27, color: this.generateInitialColor() },
 			],
 			selectedTag: "",
 		};

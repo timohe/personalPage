@@ -6,27 +6,36 @@ class Timeline extends Component {
 		<div id="content">
 	  
 		<ul className="timeline">
-		  <li className="event" data-date="2016-2018">
+			<li className="event" data-date="2018-today">
+			<h3>Freelancer</h3>
+			<p>After Helvetia made the dicision to shift the focus of Flink to be more corporate-oriented, I decided to focus on my master thesis and future projects.
+			Meanwhile I am still supporting Flink/Helvetia as a Freelancer doing knowledge-transfer, web-development and consulting.</p>
+		  </li>
+			<li className="event" data-date="2016-2018">
 			<h3>Co-Founder and CTO of Flink</h3>
 			<p>As the CTO of Flink, an internal insurance startup of Helvetia insurance, I was responsible for all the technical stuff.
-			This meant coordnationg our 3 full-time developers, work on the architecture and develop some parts (e.g. Chatbot) on my own. <br/>
-			As one of the Co-Founder, I also worked on product development, pitching and the business model.</p>
+			This meant coordinating our 3 full-time developers, defining the architecture and develop some parts (e.g. Chatbot) on my own. <br/>
+			As one of the Co-Founder, I also worked on product development, business model and successfully pitched for over 1mio CHF.</p>
 		  </li>
 		  <li className="event" data-date="2015-2019">
 			<h3>Masters in Informatics at University of Zurich</h3>
-			<p>I am currently doing my Master of Science in Informatics. My main interest mainly lies in Blockchain technology and Artificial Intelligence.</p>    
+			<p>I am doing my Master of Science in Informatics. My main interest lies in Blockchain technology and Artificial Intelligence.
+			Currently, I am working on my thesis, which is about Blockchain Interoperability.
+			</p>    
 		  </li>
 			<li className="event" data-date="2015-2016">
 			<h3>Design Thinking Project of University of St.Gallen and Stanford</h3>
-			<p>I did a 1-year design thinking project at University of St.Gallen and Standford University,
+			<p>I completed a 1-year design thinking project at University of St.Gallen and Stanford University,
       where a group of four run though the whole Design Thinking Macrocycle to develop a solution for an Insurance. <br/>
-			At this project, I developed skills in rapid prototyping, the design thinking process, pitching and business model creation.
+			This project helped me to develop skills in rapid prototyping, the design thinking process, pitching and business model creation.
 			</p>    
 		  </li>
 		  <li className="event" data-date="2014-2015">
 			<h3>Consultant at Swisscom</h3>
 			<p>In my 1-year intership as a IT-Consultant, I worked on different projects mainly with customers from the 
-			financial industy. I learned a lot about projectmanagement, customer-interactions and improved my technical knowledge.</p>    
+			financial industy. I learned a lot about projectmanagement, customer-interactions and improved my technical knowledge.<br/>
+			It also motivated me to shift my studies from Economics to Informatics.
+			</p>    
 		  </li>
 		  <li className="event" data-date="2011-2014">
 			<h3>Bachelor in Economics</h3>
