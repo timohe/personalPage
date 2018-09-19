@@ -53,8 +53,8 @@ class CustomTagCloud extends Component {
 	customRenderer = (tag, size, color) => (		
 		<span key={tag.value}
 			style={{
-				margin: '3px',
-				padding: '3px',
+				margin: '-5px 3px',
+				padding: '0px 0px',
 				display: 'inline-block',
 				fontSize: `${size/25}em`,
 				color: this.setTagColor(color, tag.value),
