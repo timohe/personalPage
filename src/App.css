@@ -127,7 +127,7 @@ p {
 
 /* Tagcloud */
 
-.tagcloud {
+.tag-cloud {
     max-width: 700px;
     margin: 0 auto;
     cursor: pointer;
@@ -148,7 +148,7 @@ a {
 
 @media only screen and (max-width: 768px) {
     .inner-content{ position: relative }
-    .tagcloud {
+    .tag-cloud {
         max-width: 100%;
         overflow: hidden;
     }

@@ -32,20 +32,16 @@ class Projects extends Component {
 	render() {
 		return (
 			<div>
-				<div className = "tagcloud">
 					<CustomTagCloud 
 						getDataFromChild={this.getDataFromChild}
 						expandDescription={this.expandDescription}
 					/>
-				</div>
-				<div>
 					<AnimateHeight
 						duration={500}
 						height={this.state.height} // see props documentation bellow
 					>
 						<p className = "projectDetails">{this.state.expandedText}</p>
 					</AnimateHeight>
-				</div>
 			</div>
 		);
 	}

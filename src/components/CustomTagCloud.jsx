@@ -66,7 +66,6 @@ class CustomTagCloud extends Component {
 			<TagCloud minSize={18}
 				maxSize={35}
 				tags={this.state.data}
-				className="simple-cloud"
 				cursor = "pointer"
 				onClick={
 					(tag) => {
