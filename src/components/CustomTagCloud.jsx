@@ -55,7 +55,7 @@ class CustomTagCloud extends Component {
 			style={{
 				margin: '3px',
 				padding: '3px',
-				// display: 'inline-block',
+				display: 'inline-block',
 				fontSize: `${size/25}em`,
 				color: this.setTagColor(color, tag.value),
 			}}>{tag.value}</span>

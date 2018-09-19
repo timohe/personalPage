@@ -126,7 +126,6 @@ p {
 }
 
 /* Tagcloud */
-
 .tag-cloud {
     max-width: 700px;
     margin: 0 auto;
@@ -145,13 +144,7 @@ a {
     margin-top:0;
 }
 
-
 @media only screen and (max-width: 768px) {
-    .inner-content{ position: relative }
-    .tag-cloud {
-        max-width: 100%;
-        overflow: hidden;
-    }
     .Welcome {
         display: block;
         margin-top: 8vh;
