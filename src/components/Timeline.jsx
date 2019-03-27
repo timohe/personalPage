@@ -6,9 +6,13 @@ class Timeline extends Component {
 		<div id="content">
 	  
 		<ul className="timeline">
-			<li className="event" data-date="2018-today">
-			<h3>Freelancer</h3>
-			<p>After Helvetia made the dicision to shift the focus of Flink to be more corporate-oriented, I decided to focus on my master thesis and future projects.
+			<li className="event" data-date="2019-today">
+			<h3>Senior Product Owner at Neon</h3>
+			<p>I currently working at the Swiss banking startup <a href="https://www.neon-free.ch">Neon</a>. As a Senior Product Owner, I am responsible for putting the most awesome features into the product.</p>
+			</li>
+			<li className="event" data-date="2018-2019">
+			<h3>Freelancer at Helvetia Consulting</h3>
+			<p>After Flink was  Helvetia made the decision to shift the focus of Flink to be more corporate-oriented, I decided to focus on my master thesis and future projects.
 			Meanwhile I am still supporting Flink/Helvetia as a Freelancer doing knowledge-transfer, web-development and consulting.</p>
 		  </li>
 			<li className="event" data-date="2016-2018">
