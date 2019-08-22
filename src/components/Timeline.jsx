@@ -12,8 +12,7 @@ class Timeline extends Component {
 			</li>
 			<li className="event" data-date="2018-2019">
 			<h3>Freelancer at Helvetia Consulting</h3>
-			<p>After Flink was  Helvetia made the decision to shift the focus of Flink to be more corporate-oriented, I decided to focus on my master thesis and future projects.
-			Meanwhile I am still supporting Flink/Helvetia as a Freelancer doing knowledge-transfer, web-development and consulting.</p>
+			<p>After leaving Flink as a CTO due to a merge into Smile Direct, I continue to support them with web-development, DevOps and consulting.</p>
 		  </li>
 			<li className="event" data-date="2016-2018">
 			<h3>Co-Founder and CTO of Flink</h3>
