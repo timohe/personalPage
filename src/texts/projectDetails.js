@@ -5,38 +5,16 @@ export const test = {
         <div>
             <p>Click on one of the other keywords see details about my experience.</p>
         </div>,
-    ReinforcedLearning:
-        <div>
-            <p>To solve the famouse mobile game '2048' aka 'threes' I used Deep Q-Learning and 
-            a neural network using Python with Keras/Tensorflow.</p>
-            <a href="https://github.com/timohe/DQN-2048">Github Repository</a>
-        </div>,
-    SmartContracts:
-        <div>
-            <p>To learn about Smart Contracts I developed a TicTacToe game with stakes on the
-                Ethereum blockchain using geth and Web3.js to interact with the frontend.</p>
-            <a href="https://github.com/timohe/ethTicTacToe">Github Repository</a>
-        </div>,
-    WebDevelopment:
-        <div>
-            <p>I have experience with reactjs, angular and node.js which I used to develop web solutions myself and 
-            was responsible for a team of three developers at the insurance startup Flink.</p>
-        </div>,
     Startup:
         <div>
-            <p>I was CTO and Cofounder of the insurance startup Flink where I was responsible for the architecture and outsourcing.
-                Furthermore I was involved in pitching, product- and stategy development.</p>
+            <p>I was CTO and Cofounder of the insurance startup Flink. Apart from leading the development, I was involved in pitching, product- and stategy development. I was also one of the first outside-hires of Neon.</p>
             <a href="https://goflink.ch">Flink Website</a>
-        </div>,
-    Prototyping:
-        <div>
-            <p>I have  a lot of experience in prototyping and wireframing from my time at Flink and the Design Thinking project.</p>
         </div>,
     DataScience:
         <div>
-            <p>In a project for my masters, I used Keras and Skikit-learn for Classification, Principal Component Analysis and Clustering.
-                Furthermore I used a convolutional neural network for image recognition.</p>
-            <a href="https://github.com/timohe/ML-CaseStudy-Wines">Github Repository</a>
+			<p>In my master studies I did several projects doing Classification, Principal Component Analysis and Clustering. The main tools I used Tensorflow and Scikit-learn.
+			One of the most interesting projects was solving the famouse mobile game '2048' aka 'threes' using deep learning, see <a href="https://github.com/timohe/ML-CaseStudy-Wines">Github Repository</a></p>
+            
         </div>,
     Economics:
         <div>
@@ -49,28 +27,17 @@ export const test = {
             <p>In a 1-year internship at Swisscom Enterprise Consulting, I was involved in different technical 
             and business projects, mainly in the financial sector.</p>
         </div>,
-    Chatbots:
+	FullStackAppDevelopment:
         <div>
-            <p>For the insurance startup flink, I developed a facebook chatbots first using Dialogflow and later using 
-                Microsoft Bot Framework. I used Node.js with Typescript for the backend and Express.js for micropages.</p>
-        </div>,
-    Hosting:
-        <div>
-            <p>I have experience in deploying and hosting webservices, some on self-configured 
-            linux servers and some using plattforms like Azure and AWS.</p>
+			<p>Apart from smaller projects, like developing a chatbot for Flink, I recently developed a companion app for the card game Tichu, which is availble in the <a href="https://apps.apple.com/ch/app/tichu-stats/id1513815058">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.statistics.tichu&hl=de_CH&gl=US">Google Play Store</a>.
+			</p>
         </div>,
     DesignThinking:
         <div>
-            <p>I did a 1-year design thinking project at University of St.Gallen and Standford University,
-            where a group of four run though the whole Design Thinking Macrocycle to develop a solution for an Insurance.</p>
-        </div>,
-    Outsourcing:
-        <div>
-            <p>I managed and lead a outsourced team of three full-time-developers for the goflink.ch website.
-            I was responsible for the whole development process, the Scrum process and hiring.</p>
+            <p>Thanks to a 1-year-long design thinking project at University of St.Gallen and Standford University I learned a lot about the Design Thinking approach. The tools and mindset still influence my daily work.</p>
         </div>,
     Blockchain:
         <div>
-            <p>During my studies I did several courses and projects on Blockchains and I am currently writing my masters thesis on Blockchain interoperability.</p>
+            <p>Blockchains were a major focus in my master's studies and continue to be a major topic of interest. I published a paper on connecting different blockchains and did smaller projects like a Tic-Tac-Toe game with betting on the Ethereum Blockchain.</p>
         </div>
 }    

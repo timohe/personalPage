@@ -14,7 +14,7 @@ class App extends Component {
      
       <NavBar />
       <Welcome />
-      <h2 id="projects">PROJECTS</h2>
+      <h2 id="projects">SKILLS & PROJECTS</h2>
       <Projects />
       <h2 id="timeline">TIMELINE</h2>
       <Timeline />

@@ -7,20 +7,14 @@ class CustomTagCloud extends Component {
 		super()
 		this.state = {
 			data: [
-				{ value: "Reinforced-Learning", count: 25, color: this.generateInitialColor() },
-				{ value: "Smart-Contracts", count: 25, color: this.generateInitialColor() },
-				{ value: "Click-Me", count: 29, color: '#000000'},
-				{ value: "Web-Development", count: 20, color: this.generateInitialColor() },
-				{ value: "Startup", count: 32, color: this.generateInitialColor() },
-				{ value: "Prototyping", count: 25, color: this.generateInitialColor() },
-				{ value: "Data-Science", count: 30, color: this.generateInitialColor() },
+				{ value: "Click-Me", count: 19, color: '#000000'},
+				{ value: "Startups", count: 32, color: this.generateInitialColor() },
+				{ value: "Data-Science", count: 21, color: this.generateInitialColor() },
 				{ value: "Economics", count: 22, color: this.generateInitialColor() },
 				{ value: "Consulting", count: 21, color: this.generateInitialColor() },
-				{ value: "Chatbots", count: 27, color: this.generateInitialColor() },
-				{ value: "Hosting", count: 23, color: this.generateInitialColor() },
-				{ value: "Design-Thinking", count: 28, color: this.generateInitialColor() },
-				{ value: "Outsourcing", count: 20, color: this.generateInitialColor() },
+				{ value: "Design-Thinking", count: 23, color: this.generateInitialColor() },
 				{ value: "Blockchain", count: 27, color: this.generateInitialColor() },
+				{ value: "Full-Stack-App-Development", count: 27, color: this.generateInitialColor() },
 			],
 			selectedTag: "",
 		};
