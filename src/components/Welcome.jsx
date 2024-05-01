@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import portrait from '../pictures/portrait.jpg'
+import portrait from '../pictures/portrait.png'
 // import 'font-awesome/css/font-awesome.min.css';
 
 class Welcome extends Component {

@@ -5,9 +5,17 @@ class Timeline extends Component {
 		return (
 			<div id="content">
 				<ul className="timeline">
-					<li className="event" data-date="2019-today">
+					<li className="event" data-date="2023-today">
+						<h3>Head of Trading at Neon</h3>
+						<p>As the architect behind the security rading feature at Neon, I assumed the position of Head of Trading, overseeing the security trading functionalities, forging strategic partnerships, and driving further advancements in our platform's development. </p>
+					</li>
+					<li className="event" data-date="2021-2023">
+						<h3>Senior Product Manager at Neon</h3>
+						<p>As neon started to build up a product team, I transitioned to a more product focused role, responsible for the roadmap and delivery of one of two tech teams.</p>
+					</li>
+					<li className="event" data-date="2019-2021">
 						<h3>Senior Product Owner at Neon</h3>
-						<p>I am currently working at the Swiss banking startup <a href="https://www.neon-free.ch">Neon</a>. I am responsible for our App and creating awesome new features for our users.</p>
+						<p>I joint the the Swiss banking startup <a href="https://www.neon-free.ch">Neon</a> in an early stage. I was product owner for the sole tech team, responsible for concepts for new features and their delivery.</p>
 					</li>
 					<li className="event" data-date="2016-2019">
 						<h3>Co-Founder and CTO of Flink</h3>

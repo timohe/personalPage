@@ -12,10 +12,10 @@ class App extends Component {
       
       <div className="App">
      
-      <NavBar />
+      {/* <NavBar /> */}
       <Welcome />
-      <h2 id="projects">SKILLS & PROJECTS</h2>
-      <Projects />
+      {/* <h2 id="projects">SKILLS & PROJECTS</h2>
+      <Projects /> */}
       <h2 id="timeline">TIMELINE</h2>
       <Timeline />
       </div>
