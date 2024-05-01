@@ -62,7 +62,7 @@ class Welcome extends Component {
             <a href="https://github.com/timohe" target="_blank" rel="noopener noreferrer"><i className="fab fa-github i-hov" /></a>
             <a href="mailto:t.hegnauer@gmail.com?Subject=Hello%20there!" target="_top"><i className="fa fa-envelope i-hov" /></a>
             <br />
-            <a href="https://drive.google.com/file/d/1RPW5GmifZs8zyiP5duii6mo9fNI3mLbQ/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button className="button resume-button">Resume <i className="fa fa-file-pdf-o" aria-hidden="true" /></button></a>
+					<a href="https://kdrive.infomaniak.com/app/share/581603/ef67e05e-8561-41e1-aacb-4ae700ea385c" target="_blank" rel="noopener noreferrer"><button className="button resume-button">Resume <i className="fa fa-file-pdf-o" aria-hidden="true" /></button></a>
           </h1>
         </div>
           <img src={portrait} className="main-pic" alt="Profile" />
