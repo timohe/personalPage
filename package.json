@@ -1,42 +1,41 @@
 {
-  "name": "personal-page",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "g": "^2.0.1",
-    "i": "^0.3.6",
-    "npm": "^6.14.8",
-    "react": "^16.13.1",
-    "react-animate-height": "^2.0.21",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.2",
-    "react-scripts": "^4.0.3",
-    "react-tagcloud": "^1.4.1",
-    "uninstall": "0.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.2.0"
-  },
-  "homepage": "https://timohegnauer.ch",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "personal-page",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"g": "^2.0.1",
+		"i": "^0.3.7",
+		"react": "^18.3.1",
+		"react-animate-height": "^2.0.21",
+		"react-dom": "^18.3.1",
+		"react-router-dom": "^6.23.0",
+		"react-router-hash-link": "^2.4.3",
+		"react-scripts": "^5.0.1",
+		"react-tagcloud": "2.3.3",
+		"uninstall": "0.0.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
+	},
+	"devDependencies": {
+		"gh-pages": "^1.2.0"
+	},
+	"homepage": "https://timohegnauer.ch",
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
