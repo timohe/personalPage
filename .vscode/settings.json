@@ -1,0 +1,42 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+
+  "biome.requireConfiguration": false,
+  "biome.enabled": true,
+
+  // run Biome’s code-actions (lint fixes, organise-imports) automatically
+  "editor.codeActionsOnSave": {
+    "quickfix.biome":            "explicit",
+    "source.fixAll.biome":       "explicit",
+    "source.organizeImports.biome": "explicit",
+  },
+
+  // avoid other formatters grabbing TSX
+  "prettier.enable": false,
+  "eslint.format.enable": false,
+"biome.lsp.bin": "biome",
+  // keep your Deno restriction to functions only
+  "deno.enablePaths": ["supabase/functions"],
+  "deno.lint": true,
+  "deno.unstable": [
+    "bare-node-builtins","byonm","sloppy-imports","unsafe-proto","webgpu",
+    "broadcast-channel","worker-options","cron","kv","ffi","fs","http","net"
+  ],
+
+  // ensure TSX is correctly associated
+  "files.associations": { "*.tsx": "typescriptreact", "*.svg": "svg" },
+
+  // ensure trailing newlines are preserved (required by Biome)
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": false
+}

@@ -1,0 +1,104 @@
+{
+	"files": {
+		"includes": [
+			"app/**",
+			"components/**",
+			"supabase/**",
+			"!**/supabase/functions/_shared/database.types.ts"
+		]
+	},
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noInnerDeclarations": "off",
+				"noConstructorReturn": "off"
+			},
+			"suspicious": {
+				"noImplicitAnyLet": "off",
+				"noConfusingVoidType": "off",
+				"noEmptyInterface": "off",
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off",
+				"noDoubleEquals": "off",
+				"noAssignInExpressions": "off",
+				"noRedeclare": "off",
+				"noConsole": {
+					"level": "off",
+					"options": {
+						"allow": [
+							"log"
+						]
+					}
+				}
+			},
+			"style": {
+				"noParameterAssign": "off",
+				"noNonNullAssertion": "off",
+				"noUnusedTemplateLiteral": "off",
+				"useDefaultParameterLast": "off",
+				"useConst": "off",
+				"useEnumInitializers": "off",
+				"useTemplate": "off",
+				"useSelfClosingElements": "off"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off",
+				"noDangerouslySetInnerHtmlWithChildren": "off"
+			},
+			"performance": {
+				"noDelete": "off",
+				"noAccumulatingSpread": "off"
+			},
+			"complexity": {
+				"noForEach": "off",
+				"noBannedTypes": "off",
+				"useLiteralKeys": "off",
+				"useSimplifiedLogicExpression": "off",
+				"useOptionalChain": "off",
+				"noUselessContinue": "off",
+				"noArguments": "off"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"useMediaCaption": "off",
+				"noHeaderScope": "off",
+				"useAltText": "off",
+				"useButtonType": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 120,
+		"includes": [
+			"**",
+			"!**/*/generated-new.ts",
+			"!**/*/generated-v2.ts"
+		]
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"semicolons": "asNeeded",
+			"quoteStyle": "single"
+		}
+	}
+}
