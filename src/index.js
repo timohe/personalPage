@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom'
+import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 
-ReactDOM.render(
-	<HashRouter>
-		<App />
-	</HashRouter>,
-	document.getElementById('root')
+const root = createRoot(document.getElementById('root'));
+root.render(
+	<React.StrictMode>
+		<HashRouter>
+			<App />
+		</HashRouter>
+	</React.StrictMode>
 );
-// registerServiceWorker();
