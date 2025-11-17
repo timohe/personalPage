@@ -71,48 +71,54 @@ function Welcome() {
 
 	return (
 		<div className="Welcome">
-			<div className="Intro-Text">
-				<h1 className="welcome-intro">
-					{" "}
-					<strong>Timo Hegnauer</strong> is a{" "}
-					<span style={{ color: "#00f2e7" }}>product manager</span> <br /> living in{" "}
-					{currentWeather}{" "}
-					<FontAwesomeIcon icon={weatherIcon} aria-hidden="true" /> Zurich
-					<br />
-					<br />
-					<a
-						href="https://linkedin.com/in/timohegnauer"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<FontAwesomeIcon icon={faLinkedin} className="i-hov" />
-					</a>
-					<a
-						href="https://github.com/timohe"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<FontAwesomeIcon icon={faGithub} className="i-hov" />
-					</a>
-					<a
-						href="mailto:t.hegnauer@gmail.com?Subject=Hello%20there!"
-						target="_top"
-					>
-						<FontAwesomeIcon icon={faEnvelope} className="i-hov" />
-					</a>
-					<br />
+			<div className="profile-card">
+				<h1 className="name">Timo Hegnauer</h1>
+				<div className="portrait-container">
+					<img src={portrait} className="main-pic" alt="Timo Hegnauer" />
+				</div>
+				<div className="location">
+					<h2 className="title">Product Manager living in </h2>
+					<h2 className="title">{currentWeather} Zurich</h2>
+					<FontAwesomeIcon icon={weatherIcon} className="weather-icon" />
+				</div>
+				<div className="contact-section">
+					<div className="contact-links">
+						<a
+							href="https://linkedin.com/in/timohegnauer"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="social-link"
+							aria-label="LinkedIn"
+						>
+							<FontAwesomeIcon icon={faLinkedin} />
+						</a>
+						<a
+							href="https://github.com/timohe"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="social-link"
+							aria-label="GitHub"
+						>
+							<FontAwesomeIcon icon={faGithub} />
+						</a>
+						<a
+							href="mailto:t.hegnauer@gmail.com?Subject=Hello%20there!"
+							className="social-link"
+							aria-label="Email"
+						>
+							<FontAwesomeIcon icon={faEnvelope} />
+						</a>
+					</div>
 					<a
 						href="https://kdrive.infomaniak.com/app/share/581603/ef67e05e-8561-41e1-aacb-4ae700ea385c"
 						target="_blank"
 						rel="noopener noreferrer"
+						className="resume-link"
 					>
-						<button type="button" className="button resume-button">
-							Resume <FontAwesomeIcon icon={faFilePdf} aria-hidden="true" />
-						</button>
+						Download CV <FontAwesomeIcon icon={faFilePdf} />
 					</a>
-				</h1>
+				</div>
 			</div>
-			<img src={portrait} className="main-pic" alt="Profile" />
 		</div>
 	);
 }
